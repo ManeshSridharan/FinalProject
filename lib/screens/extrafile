@@ -1,0 +1,70 @@
+GridView(
+          padding: EdgeInsets.symmetric(vertical: 25, horizontal: 25),
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              childAspectRatio: 4 / 6,
+              crossAxisSpacing: 20,
+              mainAxisSpacing: 20),
+          children: [
+            InkWell(
+              onTap: () {
+                PersistentNavBarNavigator.pushNewScreen(
+                  context,
+                  screen: HelpPage(),
+                );
+              },
+              splashColor: Theme.of(context).primaryColor,
+              borderRadius: BorderRadius.circular(16),
+              child: Ink(
+                padding: EdgeInsets.all(30),
+                color: Colors.green,
+                child: Text('help'),
+              ),
+            ),
+            InkWell(
+              onTap: () {
+                PersistentNavBarNavigator.pushNewScreen(
+                  context,
+                  screen: MedicationPage(),
+                );
+              },
+              splashColor: Theme.of(context).primaryColor,
+              borderRadius: BorderRadius.circular(16),
+              child: Ink(
+                padding: EdgeInsets.all(30),
+                color: Colors.yellow,
+                child: Text('medication'),
+              ),
+            ),
+            InkWell(
+              onTap: () {
+                PersistentNavBarNavigator.pushNewScreen(
+                  context,
+                  screen: RewardsPage(),
+                );
+              },
+              splashColor: Theme.of(context).primaryColor,
+              borderRadius: BorderRadius.circular(16),
+              child: Ink(
+                padding: EdgeInsets.all(30),
+                color: Colors.purple,
+                child: Text('rewards'),
+              ),
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.of(context).pushNamed(
+                  '/appointment',
+                  arguments: {},
+                );
+              },
+              splashColor: Theme.of(context).primaryColor,
+              borderRadius: BorderRadius.circular(16),
+              child: Ink(
+                padding: EdgeInsets.all(30),
+                color: Colors.blue,
+                child: Text('appointment'),
+              ),
+            ),
+          ],
+        )
